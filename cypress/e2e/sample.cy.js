@@ -8,6 +8,8 @@ describe("Buzz Module Verification", ()=>{
 
         cy.log(moment().format('dddd'))
 
+        cy.visit("https://www.google.com/")
+
     })
 
 

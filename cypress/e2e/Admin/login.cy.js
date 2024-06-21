@@ -1,4 +1,7 @@
+
 import data from "../../fixtures/logincreds.json"
+
+import login from '../../../PageObjects/loginPage.po'
 describe('Login functionality', () => {
 
   const credentials = {
@@ -8,24 +11,32 @@ describe('Login functionality', () => {
 }
 
 
-  it("Verify login's positive test - Valid credentials", () => {
+beforeEach(()=>{
+
+  cy.log("Test Execution Started")
+
+  cy.visit('/web/index.php/auth/login')
+  
+  })
+
+  
+afterEach(()=>{
+
+  cy.log("Test Execution Completed")
+
+  
+  })
+  it.only("Verify login's positive test - Valid credentials", () => {
 
     let username = "Admin"
     let password = "admin123"
     
-    cy.visit('/web/index.php/auth/login')
 
-    str= "/web/index.php/auth/login"
+    cy.xpath(login.inputfiled("username"),{timeout:40000}).type(credentials.username)
 
-    if(url == "/web/index.php/auth/login"){
+    cy.xpath(login.inputfiled("password")).type(credentials.password)
 
-      
-
-    cy.get('input[name="usernamebhjbjhb"]',{timeout:40000}).type(credentials.Username)
-
-    cy.get('input[type="password"]').type(credentials.password)
-
-    cy.get('button[type="submit"]').click()
+    cy.get(login.loginBtn()).click()
 
     cy.url().should("eq", "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index")
 
@@ -37,34 +48,28 @@ describe('Login functionality', () => {
 
     // cy.contains('Dashboard').should("be.visible")
 
-    }
+    
 
   })
 
 
   it('Verify login with Valid username and invalid password', () => {
     
-    cy.visit('/web/index.php/auth/login')
+    
+    cy.xpath(login.usernameInput(),{timeout:40000}).type("Admin")
 
-    cy.get(`input[name='username']`).type(`Admin`)
+    cy.get(login.passwordInput()).type("jgfnkjern")
 
-    cy.get('input[type="password"]').type("kerfhyuerhuio")
+    cy.get(login.loginBtn()).click()
 
-    cy.get('button[type="submit"]').click()
-
-    cy.contains('Invalid credentials').should("be.visible")
+    cy.xpath("//*[text()='Invalid credentials']").should("be.visible")
   })
 
 
   it('Verify login with InValid username and valid password', () => {
     
-    cy.visit('/web/index.php/auth/login')
-
-    cy.get('input[name="username"]').type("yhfuerhfyu")
-
-    cy.get('input[type="password"]').type("admin123")
-
-    cy.get('button[type="submit"]').click()
+ 
+    login.loginwithCreds("ehfuiheru", "admin123")
 
     cy.contains('Invalid credentials').should("be.visible")
   })
@@ -75,13 +80,8 @@ describe('Login functionality', () => {
 
     cy.viewport("ipad-2")
     
-    cy.visit('/web/index.php/auth/login')
-
-    cy.get('input[name="username"]').type("yhfuerhfyu")
-
-    cy.get('input[type="password"]').type("erugtuy")
-
-    cy.get('button[type="submit"]').click()
+ 
+    login.loginwithCreds("sdfisnghre", "krehui")
 
     cy.contains('Invalid credentials').should("be.visible")
   })
