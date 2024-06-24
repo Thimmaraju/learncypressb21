@@ -12,13 +12,13 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     video: true,
     videosFolder:"cypress/raju",
-    retries: {openMode: 3,runMode:1},
+    retries: {openMode: 1,runMode:1},
     env:{
 
        username: "Admin",
        password: "admin123"
     },
-
+    "watchForFileChanges":false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);

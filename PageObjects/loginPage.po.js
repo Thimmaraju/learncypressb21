@@ -1,16 +1,16 @@
 class loginPage {
 
-    // usernameInput() {
+    usernameInput() {
 
-    //     return '//input[@name="username"]'
+        return '//input[@name="username"]'
 
-    // }
+    }
 
-    // passwordInput() {
+    passwordInput() {
 
-    //     return 'input[name="password"]'
+        return 'input[name="password"]'
 
-    // }
+    }
 
     inputfiled(str){
 
