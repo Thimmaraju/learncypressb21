@@ -23,3 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.on("uncaught:exception", () => {
+
+    return false;
+  });
+
+  import 'cypress-file-upload';
+  require('cypress-downloadfile/lib/downloadFileCommand')
+  require('@4tw/cypress-drag-drop')

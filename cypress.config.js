@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const {downloadFile} = require('cypress-downloadfile/lib/addPlugin')
 
 module.exports = defineConfig({
 
@@ -11,8 +12,9 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     viewportHeight: 1080,
     video: true,
+    experimentalSessionAndOrigin:true,
     videosFolder:"cypress/raju",
-    retries: {openMode: 1,runMode:1},
+    //retries: {openMode: 1,runMode:1},
     env:{
 
        username: "Admin",
@@ -21,6 +23,7 @@ module.exports = defineConfig({
     "watchForFileChanges":false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      on('task', {downloadFile})
       require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
