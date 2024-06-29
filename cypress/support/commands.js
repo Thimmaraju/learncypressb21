@@ -32,3 +32,34 @@ Cypress.on("uncaught:exception", () => {
   import 'cypress-file-upload';
   require('cypress-downloadfile/lib/downloadFileCommand')
   require('@4tw/cypress-drag-drop')
+
+
+  Cypress.Commands.add('addemployee', (firstanme,lastname) => { 
+    
+      
+    cy.contains('PIM').click()
+
+    cy.contains('Add Employee').click()
+
+    cy.get('input[name="firstName"]').type(firstanme)
+
+    cy.get('input[name="lastName"]').type(lastname)
+
+    cy.get('button[type="submit"]').click()
+
+    cy.contains('Successfully Saved').should("be.visible")
+
+   })
+
+
+   Cypress.Commands.add('launchapplication', () => {
+    
+    cy.log("Test Execution Started")
+
+    cy.visit('/web/index.php/auth/login')
+
+   })
+
+   
+   
+

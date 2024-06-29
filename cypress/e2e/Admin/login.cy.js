@@ -13,9 +13,7 @@ describe('Login functionality', () => {
 
 beforeEach(()=>{
 
-  cy.log("Test Execution Started")
-
-  cy.visit('/web/index.php/auth/login')
+   cy.launchapplication()
   
   })
 

@@ -34,9 +34,11 @@ describe("Verify Add employee functionality", () => {
         }
         //cy.get('a[href="/web/index.php/pim/viewPimModule"]>span').click()
 
-        cy.contains(dashboard.pimMenu()).click()
+        // cy.contains(dashboard.pimMenu()).click()
 
-        addemployee.addEmployee("Sridevi", "S")
+        // addemployee.addEmployee("Sridevi", "S")
+
+        cy.addemployee("Sridevi", "S")
 
         //or
 

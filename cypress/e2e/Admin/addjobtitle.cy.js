@@ -8,7 +8,7 @@ describe('Verify Add job title', () => {
   
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
-    cy.get('input[name="username"]',{timeout:40000}).type(logindata.username)
+    cy.get('input[name="username"]',{timeout:40000}).type(Cypress.env("username"))
 
     cy.get('input[type="password"]').type(logindata.password)
 

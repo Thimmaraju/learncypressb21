@@ -19,45 +19,45 @@ describe('Automation - Working With Drag and Drop', function () {
 
     // cy.get('.sourceitem').drag('.targetitem')
 
-      cy.get('#menu-fried-chicken').drag('#plate-items');
+//      cy.get('#menu-fried-chicken').drag('#plate-items');
 
-    cy.get('#menu-hamburger').drag('#plate-items');
+   // cy.get('#menu-hamburger').drag('#plate-items');
 
     //cy.get('#menu-ice-cream').drag('#plate-items')
 
     //Second Approach
 
-    // const dataTransfer = new DataTransfer();
+     const dataTransfer = new DataTransfer();
 
-    // cy.get('#menu-fried-chicken').trigger('dragstart', {
+    cy.get('#menu-fried-chicken').trigger('dragstart', {
 
-    //   dataTransfer
-    // })
+      dataTransfer
+    })
 
-    // cy.get('#plate-items').trigger('drop', {
+    cy.get('#plate-items').trigger('drop', {
 
-    //   dataTransfer
-    // })
+      dataTransfer
+    })
 
-    // cy.get('#menu-hamburger').trigger('dragstart', {
+    cy.get('#menu-hamburger').trigger('dragstart', {
 
-    //   dataTransfer
-    // })
+      dataTransfer
+    })
 
-    // cy.get('#plate-items').trigger('drop', {
+    cy.get('#plate-items').trigger('drop', {
 
-    //   dataTransfer
-    // })
+      dataTransfer
+    })
 
-    // cy.get('#menu-ice-cream').trigger('dragstart', {
+    cy.get('#menu-ice-cream').trigger('dragstart', {
 
-    //   dataTransfer
-    // })
+      dataTransfer
+    })
 
-    // cy.get('#plate-items').trigger('drop', {
+    cy.get('#plate-items').trigger('drop', {
 
-    //   dataTransfer
-    // })
+      dataTransfer
+    })
 
 
   })

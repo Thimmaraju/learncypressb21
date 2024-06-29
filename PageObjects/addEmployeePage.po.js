@@ -14,7 +14,7 @@ class addEmployeePage{
 
     addEmployee(firstname, lastname){
 
-        cy.contains(this.addEmployeeMenu()).click()
+        //cy.contains(this.addEmployeeMenu()).click()
 
         cy.get(this.firstnameInput).type(firstname)
 
