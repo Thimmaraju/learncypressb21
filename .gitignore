@@ -4,3 +4,4 @@ cypress/videos
 cypress/raju
 cypress/screenshots
 cypress/reports
+allure-results
