@@ -1,0 +1,74 @@
+{
+  "body": {
+    "name": "Raju",
+    "job": "Trainer",
+    "id": "771",
+    "createdAt": "2024-07-02T02:51:12.140Z"
+  },
+  "headers": {
+    "date": "Tue, 02 Jul 2024 02:51:12 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "81",
+    "connection": "keep-alive",
+    "report-to": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1719888672&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=ttJntCc6x6RoIhEQZJStMqMUh1OYyXm4xWyDMU4Zk%2FQ%3D\"}]}",
+    "reporting-endpoints": "heroku-nel=https://nel.heroku.com/reports?ts=1719888672&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=ttJntCc6x6RoIhEQZJStMqMUh1OYyXm4xWyDMU4Zk%2FQ%3D",
+    "nel": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}",
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "etag": "W/\"51-Hbsx0uRr+cOO0SN+OqYriaWOj5k\"",
+    "via": "1.1 vegur",
+    "cf-cache-status": "DYNAMIC",
+    "server": "cloudflare",
+    "cf-ray": "89cb552729643c13-BLR"
+  },
+  "status": 201,
+  "statusText": "Created",
+  "isOkStatusCode": true,
+  "requestHeaders": {
+    "Connection": "keep-alive",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate",
+    "content-type": "application/json",
+    "content-length": 31
+  },
+  "requestBody": "{\"name\":\"Raju\",\"job\":\"Trainer\"}",
+  "duration": 370,
+  "allRequestResponses": [
+    {
+      "Request Body": "{\"name\":\"Raju\",\"job\":\"Trainer\"}",
+      "Request Headers": {
+        "Connection": "keep-alive",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": 31
+      },
+      "Request URL": "https://reqres.in/api/users",
+      "Response Body": {
+        "name": "Raju",
+        "job": "Trainer",
+        "id": "771",
+        "createdAt": "2024-07-02T02:51:12.140Z"
+      },
+      "Response Headers": {
+        "date": "Tue, 02 Jul 2024 02:51:12 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "81",
+        "connection": "keep-alive",
+        "report-to": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1719888672&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=ttJntCc6x6RoIhEQZJStMqMUh1OYyXm4xWyDMU4Zk%2FQ%3D\"}]}",
+        "reporting-endpoints": "heroku-nel=https://nel.heroku.com/reports?ts=1719888672&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=ttJntCc6x6RoIhEQZJStMqMUh1OYyXm4xWyDMU4Zk%2FQ%3D",
+        "nel": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}",
+        "x-powered-by": "Express",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"51-Hbsx0uRr+cOO0SN+OqYriaWOj5k\"",
+        "via": "1.1 vegur",
+        "cf-cache-status": "DYNAMIC",
+        "server": "cloudflare",
+        "cf-ray": "89cb552729643c13-BLR"
+      },
+      "Response Status": 201
+    }
+  ]
+}

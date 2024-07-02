@@ -22,6 +22,7 @@ module.exports = defineConfig({
        username: "Admin",
        password: "admin123",
        "allureResultsPath": "allure-results",
+       "cookivalue" : "orangehrm=edebf9f9402ea2cf94ce10848d767cbd"
     },
     "watchForFileChanges":false,
     setupNodeEvents(on, config) {
