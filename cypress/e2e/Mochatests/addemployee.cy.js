@@ -1,7 +1,7 @@
-import login from "../../PageObjects/loginPage.po"
-import dashboard from "../../PageObjects/dashboardPage.po"
+import login from "../../../PageObjects/loginPage.po"
+import dashboard from "../../../PageObjects/dashboardPage.po"
 
-import addemployeedata from "../fixtures/ExceltoJson/addemploye.json"
+import addemployeedata from "../../fixtures/ExceltoJson/addemploye.json"
 //import addemployee from "../PageObjects/addEmployeePage.po"
 
 //import addEmployeePage from "../PageObjects/addEmployeePage.po"

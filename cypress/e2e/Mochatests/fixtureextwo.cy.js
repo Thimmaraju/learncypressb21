@@ -1,6 +1,6 @@
 
 
-import login from "../../PageObjects/loginPage.po"
+import login from "../../../PageObjects/loginPage.po"
 
 //import data from "../fixtures/pim/addemployee.json"
 

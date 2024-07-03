@@ -1,6 +1,6 @@
-import addemployeedata from "../fixtures/payload.json"
+import addemployeedata from "../../fixtures/payload.json"
 
-import emp from "../../PageObjects/sample.po"
+import emp from "../../../PageObjects/sample.po"
 describe("API Test automation", ()=>{
 
 

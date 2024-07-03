@@ -7,6 +7,8 @@ module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
 
+    specPattern: "**/*.feature",
+
     projectId: "mjq6je",
     baseUrl:"https://opensource-demo.orangehrmlive.com",
     defaultCommandTimeout:20000,
@@ -15,7 +17,7 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     video: true,
     experimentalSessionAndOrigin:true,
-    videosFolder:"cypress/raju",
+    //videosFolder:"cypress/raju",
     //retries: {openMode: 1,runMode:1},
     env:{
 
@@ -27,11 +29,12 @@ module.exports = defineConfig({
     "watchForFileChanges":false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      
+      return require('./cypress/plugins/index.js')(on, config)
       on('task', {downloadFile})
       require('cypress-mochawesome-reporter/plugin')(on);
       allureWriter(on, config);
       return config;
+      
     },
   },
 });

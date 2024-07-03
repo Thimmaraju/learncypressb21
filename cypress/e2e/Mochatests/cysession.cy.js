@@ -1,4 +1,4 @@
-import addemployee from "../../PageObjects/addEmployeePage.po"
+import addemployee from "../../../PageObjects/addEmployeePage.po"
 
 describe('Validate Orange HRM Login functionality', function () {
 

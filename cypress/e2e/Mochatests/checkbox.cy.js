@@ -1,4 +1,4 @@
-import login from "../../PageObjects/loginPage.po"
+import login from "../../../PageObjects/loginPage.po"
 describe("Buzz Module Verification", () => {
 
     it("verify user can do a posting in whats on your mind", () => {
